@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿//using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore;
 
-namespace TravelProject.Data;
+//namespace TravelProject.Data;
 
-public class ApplicationDbContext : IdentityDbContext
-{
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
-    {
-    }
-}
+//public class ApplicationDbContext : IdentityDbContext
+//{
+//    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+//        : base(options)
+//    {
+//    }
+//}

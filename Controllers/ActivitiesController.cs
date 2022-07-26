@@ -12,9 +12,9 @@ namespace TravelProject.Controllers
 {
     public class ActivitiesController : Controller
     {
-        private readonly TravelProjectContext _context;
+        private readonly Context _context;
 
-        public ActivitiesController(TravelProjectContext context)
+        public ActivitiesController(Context context)
         {
             _context = context;
         }
@@ -36,7 +36,7 @@ namespace TravelProject.Controllers
             }
 
             var activities = await _context.Activities
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.IdActivity == id);
             if (activities == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace TravelProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Activities activities)
+        public async Task<IActionResult> Create([Bind("Id,Title,Duration,Type,Price")] Activities activities)
         {
             if (ModelState.IsValid)
             {
@@ -88,9 +88,9 @@ namespace TravelProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Activities activities)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Duration,Type,Price")] Activities activities)
         {
-            if (id != activities.Id)
+            if (id != activities.IdActivity)
             {
                 return NotFound();
             }
@@ -104,7 +104,7 @@ namespace TravelProject.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ActivitiesExists(activities.Id))
+                    if (!ActivitiesExists(activities.IdActivity))
                     {
                         return NotFound();
                     }
@@ -118,6 +118,11 @@ namespace TravelProject.Controllers
             return View(activities);
         }
 
+        private bool ActivitiesExists(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
         // GET: Activities/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -127,7 +132,7 @@ namespace TravelProject.Controllers
             }
 
             var activities = await _context.Activities
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.IdActivity == id);
             if (activities == null)
             {
                 return NotFound();
@@ -157,7 +162,7 @@ namespace TravelProject.Controllers
 
         private bool ActivitiesExists(int id)
         {
-          return (_context.Activities?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Activities?.Any(e => e.IdActivity == id)).GetValueOrDefault();
         }
     }
 }
