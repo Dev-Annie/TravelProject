@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Athena\\TravelProject\\TravelProject.csproj": {}
+    "C:\\Users\\Athena\\Desktop\\New 727\\TravelProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Athena\\TravelProject\\TravelProject.csproj": {
+    "C:\\Users\\Athena\\Desktop\\New 727\\TravelProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Athena\\TravelProject\\TravelProject.csproj",
+        "projectUniqueName": "C:\\Users\\Athena\\Desktop\\New 727\\TravelProject.csproj",
         "projectName": "TravelProject",
-        "projectPath": "C:\\Users\\Athena\\TravelProject\\TravelProject.csproj",
+        "projectPath": "C:\\Users\\Athena\\Desktop\\New 727\\TravelProject.csproj",
         "packagesPath": "C:\\Users\\Athena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Athena\\TravelProject\\obj\\",
+        "outputPath": "C:\\Users\\Athena\\Desktop\\New 727\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Athena\\AppData\\Roaming\\NuGet\\NuGet.Config",
