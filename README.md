@@ -66,8 +66,7 @@ This application will be using .NET core, Entity Framework, C#, Sqlite
 
 # Start Up
 
-All services can be initialised from the command-line by running the bash script provided within the repository. Please
-clone the repository and run commands
+All services can be initialised by cloning the repository
 
 ```console
 git clone https://github.com/Dev-Annie/TravelProject.git

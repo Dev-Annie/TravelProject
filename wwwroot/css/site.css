@@ -22,6 +22,8 @@ homepagebackground{
     background-color: red;
 }
 
+*{border:1px solid green;}
+
 @media (min-width: 768px) {
     html {
     font-size: 16px;
