@@ -17,7 +17,7 @@ namespace TravelProject.Models
 
 
         [Display(Name = "Enter Activity Name")]
-        [StringLength(50)]
+        [StringLength(30)]
         [Required(ErrorMessage = "{0} is required.")]
         public string? Title { get; set; }
 
@@ -30,14 +30,25 @@ namespace TravelProject.Models
         //public string? Description { get; set; }
 
         [Display(Name = "Enter Activity Type")]
-        public string? Type { get; set; }
+        public Groups Type { get; set; }
+        //public string Type { get; set; }
+      
 
         [Display(Name = "Price")]
+        [DataType(DataType.Currency)]
         public decimal? Price { get; set; }
 
         //[Display(Name = "Select the Image")]
         //public string? ImagePath { get; set; }
 
 
+    }
+
+    public enum Groups
+    {
+        Sports,
+        Attractions,
+        Culture,
+        Scenic
     }
 }

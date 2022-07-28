@@ -22,6 +22,7 @@ namespace TravelProject.Models
         public string? Rentalname { get; set; }
 
         [Display(Name = "Party")]
+        [Range(1, 100)]
         public decimal? Party { get; set; }
 
         //[Display(Name = "Enter Description")]
@@ -30,9 +31,12 @@ namespace TravelProject.Models
         //public string? Description { get; set; }
 
         [Display(Name = "Enter Rental City")]
+        [Required]
+        [StringLength(30)]
         public string? City { get; set; }
 
         [Display(Name = "Fee")]
+        [DataType(DataType.Currency)]
         public decimal? Fee { get; set; }
 
         //[Display(Name = "Select the Image")]

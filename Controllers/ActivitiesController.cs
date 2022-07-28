@@ -57,8 +57,9 @@ namespace TravelProject.Controllers
             return View();
         }
 
+
         // POST: Activities/Create
-           
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdActivity,Title,Duration,Type,Price")] Activities activities)
