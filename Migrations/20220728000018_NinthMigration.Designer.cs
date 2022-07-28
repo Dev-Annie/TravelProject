@@ -47,7 +47,7 @@ namespace TravelProject.Migrations
                     b.ToTable("Activities");
                 });
 
-            modelBuilder.Entity("TravelProject.Models.Parks", b =>
+            modelBuilder.Entity("TravelProject.Models.Rentals", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,10 +68,10 @@ namespace TravelProject.Migrations
                     b.Property<string>("Manufacturer")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ParkCode")
+                    b.Property<string>("RentalCode")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ParkName")
+                    b.Property<string>("RentalName")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Quantity")
@@ -85,7 +85,7 @@ namespace TravelProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Parks");
+                    b.ToTable("Rentals");
                 });
 #pragma warning restore 612, 618
         }

@@ -22,13 +22,13 @@ namespace TravelProject.Migrations
                 oldType: "TEXT");
 
             migrationBuilder.CreateTable(
-                name: "Parks",
+                name: "Rentals",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ParkCode = table.Column<string>(type: "TEXT", nullable: true),
-                    ParkName = table.Column<string>(type: "TEXT", nullable: true),
+                    RentalCode = table.Column<string>(type: "TEXT", nullable: true),
+                    RentalName = table.Column<string>(type: "TEXT", nullable: true),
                     Manufacturer = table.Column<string>(type: "TEXT", nullable: true),
                     ShippingNo = table.Column<string>(type: "TEXT", nullable: true),
                     SerialNo = table.Column<int>(type: "INTEGER", nullable: false),
@@ -40,14 +40,14 @@ namespace TravelProject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Parks", x => x.Id);
+                    table.PrimaryKey("PK_Rentals", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Parks");
+                name: "Rentals");
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "Duration",

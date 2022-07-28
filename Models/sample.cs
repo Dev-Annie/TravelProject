@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace TravelProject.Models
 
 {
-    public class Activities
+    public class S
     {
 
         [Key]

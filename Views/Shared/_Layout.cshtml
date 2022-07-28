@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - Costa Rica Amigos </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/TravelProject.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="/Shared/Site.css" />
     
 </head>
 <body>
@@ -31,6 +31,9 @@
                         </li>
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Chat">Chat</a>
+                        </li>
+                           <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rentals" asp-action="Index">Rentals</a>
                         </li>
                           </ul>
                 </div>

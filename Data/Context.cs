@@ -18,6 +18,8 @@ namespace TravelProject.Data
 
         public DbSet<TravelProject.Models.Activities> Activities { get; set; } = default!;
 
+        public DbSet<TravelProject.Models.Rentals>? Rentals { get; set; }
+
     }
     public class ApplicationDbContext : IdentityDbContext
     {

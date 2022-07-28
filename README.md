@@ -35,15 +35,23 @@ Within this basic shopping cart management system there are two entities.   The 
     -   Name, e.g. "Zip-lining"
     -   Duration, e.g. "3 hour session"
     -   Price, e.g. $50 USD
--    **Park** is a location and has properties such as:  
-    -   Park name, e.g. "Arena National Park"
+-    **Rental** is a location and has properties such as:  
+    -   Rental name, e.g. "Arena National Rental"
     -   City, e.g. Jaco (in Costa Rica)
-    -   Entrance fee, e.g. $15 USD
-    -   An association to the activity in which the park is located
+    -   Nightly Fee, e.g. $40/day USD
+    -   An association to the activity in which the rental is located
 
 # Architecture
 
-This application will be using .NET core, Entity Frameowrk, C#, Sqlite 
+This application will be using .NET core, Entity Framework, C#, Sqlite 
+
+-You must create at least one class, then create at least one object of that class and populate it with data. You must use or display the data in your application.
+
+-Create and call at least 3 functions or methods, at least one of which must return a value that is used in your application.
+
+-Choose at least 3 items on the Features List below and implement them in your project
+
+
 
 
 # Prerequisites
@@ -77,6 +85,8 @@ Or you could make your own, but it would be for a new tour guide user!
 # How does this app utilize CRUD?
 
 The four functions this app is built on is **Create**, **Read**, **Update** and **Delete** 
+![MVC Diagram] (https://www.tutorialsteacher.com/Content/images/mvc/mvc-architecture.png)
+![User Flow] (https://www.tutorialsteacher.com/Content/images/mvc/request-handling-in-mvc.png)
 
 # Next steps
 
