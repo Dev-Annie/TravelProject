@@ -1,7 +1,8 @@
-[![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
+#COSTA RICA AMIGOS#
+![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
 
 
-This web app is catered to the fictious “Costa Rica Amigogs” tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+This web app is catered to the fictious “Costa Rica Amigos” tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
 
 
 ## Contents
@@ -29,11 +30,11 @@ This web app is catered to the fictious “Costa Rica Amigogs” tour guide company 
 Within this basic shopping cart management system there are two entities.   The entity relationships are detailed here: 
 
 
--   A **Activities** are the events the customer would like to plan and have the following properties: 
+-    **Activities** are the events the customer would like to plan and have the following properties: 
     -   Name, e.g. "Zip-lining"
     -   Duration, e.g. "3 hour session"
     -   Price, e.g. $50 USD
--   A **Park** is a location and has properties such as:  
+-    **Park** is a location and has properties such as:  
     -   Park name, e.g. "Arena National Park"
     -   City, e.g. Jaco (in Costa Rica)
     -   Entrance fee, e.g. $15 USD
@@ -62,10 +63,9 @@ clone the repository and run commands
 ```console
 git clone https://github.com/Dev-Annie/TravelProject.git
 
-./services start
 ```
 
-This command will also import seed data from the previous on startup.
+This command will sometimes import seed data from the previous on startup.
 
 ADMIN USERNAME: user@email.com
 ADMIN PASSWORD: Password123!
