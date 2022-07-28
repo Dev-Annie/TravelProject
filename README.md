@@ -4,9 +4,6 @@
 This web app is catered to the fictious “Costa Rica Amigogs” tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
 
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7764c9cbc3cfe2d5b403)
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/FIWARE/tutorials.CRUD-Operations/tree/NGSI-v2)
-
 ## Contents
 
 <details>
@@ -17,7 +14,7 @@ This web app is catered to the fictious “Costa Rica Amigogs” tour guide company 
 -   [Architecture](#architecture)
 -   [Prerequisites](#prerequisites)
 -   [Start Up](#start-up)
--   [What does this CRUD app do?](# How-does-this-app-utilize-CRUD?) 
+-   [What does this CRUD app do?](#How-does-this-app-utilize-CRUD?) 
     -   [Create Operations](#create-operations)
     -   [Read Operations](#read-operations)
     -   [Update Operations](#update-operations)
@@ -46,7 +43,7 @@ Within this basic shopping cart management system there are two entities.   The 
 
 This application will be using .NET core, Entity Frameowrk, C#, Sqlite 
 
-```yaml
+
 # Prerequisites
 
 ## Visual Studio
@@ -79,3 +76,8 @@ Or you could make your own, but it would be for a new tour guide user!
 # How does this app utilize CRUD?
 
 The four functions this app is built on is **Create**, **Read**, **Update** and **Delete** 
+
+# Next steps
+
+This MVC can be updated to have multiple prices per adult/ group/ child.  
+Better mobile responsiveness can allow people to book specific dates from their phone or tablet
