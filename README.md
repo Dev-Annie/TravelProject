@@ -1,7 +1,7 @@
-[![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
+![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
 
 
-This web app is catered to the fictious ìCosta Rica Amigogsî tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+This web app is catered to the fictious ‚ÄúCosta Rica Amigogs‚Äù tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
 
 
 ## Contents
