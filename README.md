@@ -1,4 +1,5 @@
-#COSTA RICA AMIGOS#
+#COSTA RICA AMIGOS
+
 ![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
 
 
