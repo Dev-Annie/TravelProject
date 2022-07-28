@@ -19,18 +19,18 @@ namespace TravelProject.Migrations
 
             modelBuilder.Entity("TravelProject.Models.Activities", b =>
                 {
-                    b.Property<int>("IdActivity")
+                    b.Property<int?>("IdActivity")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(20)
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description")
+                    b.Property<decimal?>("Duration")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Duration")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Id")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal?>("Price")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
@@ -38,12 +38,52 @@ namespace TravelProject.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("IdActivity");
 
                     b.ToTable("Activities");
+                });
+
+            modelBuilder.Entity("TravelProject.Models.Parks", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("BatchNo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CreatedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("LastModifiedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("MRP")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Manufacturer")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ParkCode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ParkName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SerialNo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ShippingNo")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Parks");
                 });
 #pragma warning restore 612, 618
         }

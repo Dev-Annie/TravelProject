@@ -21,9 +21,9 @@ namespace TravelProject.Migrations
 
             modelBuilder.Entity("TravelProject.Models.Activities", b =>
                 {
-                    //b.Property<int>("idActivity")
-                    //    .ValueGeneratedOnAdd()
-                    //    .HasColumnType("INTEGER");
+                    b.Property<int?>("idActivity")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
@@ -45,7 +45,7 @@ namespace TravelProject.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                //    b.HasKey("idActivity");
+                    b.HasKey("idActivity");
 
                     b.ToTable("Activities");
                 });

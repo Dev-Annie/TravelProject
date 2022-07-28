@@ -13,10 +13,11 @@ namespace TravelProject.Data
         public Context() : base() { }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {// connect to sqlite database
-            options.UseSqlite(@"Data Source=CostaRicaData.db");
+            options.UseSqlite(@"Data Source=app.db");
         }
 
         public DbSet<TravelProject.Models.Activities> Activities { get; set; } = default!;
+
     }
     public class ApplicationDbContext : IdentityDbContext
     {

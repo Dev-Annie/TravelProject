@@ -12,7 +12,7 @@ namespace TravelProject.Migrations
 {
     [DbContext(typeof(Context))]
     [Migration("20220726001322_fourthMigrate")]
-    partial class fourthMigrate
+    partial class FourthMigrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

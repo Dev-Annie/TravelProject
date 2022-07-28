@@ -21,14 +21,14 @@ namespace TravelProject.Migrations
 
             modelBuilder.Entity("TravelProject.Models.Activities", b =>
                 {
-                  //  b.Property<int>("idActivity")
-                  //      .ValueGeneratedOnAdd()
-                  //      .HasMaxLength(20)
-                  //      .HasColumnType("INTEGER");
+                    b.Property<int>("idActivity")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(20)
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
+                    //b.Property<string>("Description")
+                    //    .HasMaxLength(200)
+                    //    .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Duration")
                         .HasColumnType("TEXT");
@@ -49,7 +49,7 @@ namespace TravelProject.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
-                //    b.HasKey("idActivity");
+                    b.HasKey("idActivity");
 
                     b.ToTable("Activities");
                 });

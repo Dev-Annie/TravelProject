@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TravelProject</title>
+ 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TravelProject.styles.css" asp-append-version="true" />
 </head>
@@ -25,16 +27,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                          </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                            style="background-color:white;color:black;border:none !important;outline:none !important">
+                        Activities
+                    </button>
+                    <div class="dropdown-menu">
+                        <ul>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Things to Do">Things</a>
+                            <a class="nav-link text-dark" asp-controller="Activities" asp-action="Index">List Activities</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Chat with us">Chat</a>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
+                </div>
                     <partial name="_LoginPartial" />
                 </div>
-            </div>
+           
         </nav>
     </header>
     <div class="container">

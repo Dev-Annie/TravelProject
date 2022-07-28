@@ -4,7 +4,7 @@
 
 namespace TravelProject.Migrations
 {
-    public partial class fourthMigrate : Migration
+    public partial class FourthMigrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
