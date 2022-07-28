@@ -2,7 +2,7 @@
 ![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
 
 
-This web app is catered to the fictious “Costa Rica Amigos” tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+This web app is catered to the fictious â€œCosta Rica Amigosâ€ tour guide company to list their services using [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
 
 
 ## Contents
