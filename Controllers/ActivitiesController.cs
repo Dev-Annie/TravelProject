@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
 using TravelProject.Data;
 using TravelProject.Models;
 
@@ -30,17 +25,18 @@ namespace TravelProject.Controllers
         // GET: Activities
         public async Task<IActionResult> Index()
         {
-            ViewData["MainPath"] = Directory.GetCurrentDirectory();
-            return View(await _context.Activities.ToListAsync());
-              //return _context.Activities != null ? 
-              //            View(await _context.Activities.ToListAsync()) :
-              //            Problem("Entity set 'TravelProjectContext.Activities'  is null.");
+
+
+            return _context.Activities != null ?
+                        View(await _context.Activities.ToListAsync()) :
+                        Problem("Entity set 'Context.Activities' is null.");
         }
 
         // GET: Activities/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
+
+            if (id == null || _context.Activities == null)
             {
                 return NotFound();
             }
@@ -71,7 +67,8 @@ namespace TravelProject.Controllers
             {
                 _context.Add(activities);
                 await _context.SaveChangesAsync();
-                
+                return RedirectToAction(nameof(Index));
+
             }
             return View(activities);
         }
@@ -79,7 +76,7 @@ namespace TravelProject.Controllers
         // GET: Activities/Edit
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
+            if (id == null || _context.Activities == null)
             {
                 return NotFound();
             }
@@ -96,9 +93,9 @@ namespace TravelProject.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 
-        [HttpPost, ActionName("Edit")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Duration,Type,Price")] Activities activities)
+        public async Task<IActionResult> Edit(int id, [Bind("IdActivity,Title,Duration,Type,Price")] Activities activities)
         {
             if (id != activities.IdActivity)
             {
@@ -128,15 +125,11 @@ namespace TravelProject.Controllers
             return View(activities);
         }
 
-        public bool ActivitiesExists(int? id)
-        {
-            throw new NotImplementedException();
-        }
 
         // GET: Activities/Delete
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+            if (id == null || _context.Activities == null)
             {
                 return NotFound();
             }
@@ -156,17 +149,27 @@ namespace TravelProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-       
+            if (_context.Activities == null)
+            {
+                return Problem("Entity set 'Context.Activities'  is null.");
+            }
             var activities = await _context.Activities.FindAsync(id);
-      
-            _context.Activities.Remove(activities);
+            if (activities != null)
+            {
+                _context.Activities.Remove(activities);
+            }
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+
         public bool ActivitiesExists(int id)
         {
-          return _context.Activities.Any(e => e.IdActivity == id);
+            return (_context.Activities?.Any(e => e.IdActivity == id)).GetValueOrDefault();
         }
     }
 }
+
+
+

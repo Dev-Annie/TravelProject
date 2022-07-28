@@ -85,8 +85,8 @@ Or you could make your own, but it would be for a new tour guide user!
 # How does this app utilize CRUD?
 
 The four functions this app is built on is **Create**, **Read**, **Update** and **Delete** 
-![MVC Diagram] (https://www.tutorialsteacher.com/Content/images/mvc/mvc-architecture.png)
-![User Flow] (https://www.tutorialsteacher.com/Content/images/mvc/request-handling-in-mvc.png)
+![MVC Diagram] (https://tutorialsteacher.com/Content/images/mvc/mvc-architecture.png)
+![User Flow] (https://tutorialsteacher.com/Content/images/mvc/request-handling-in-mvc.png)
 
 # Next steps
 
