@@ -75,8 +75,8 @@ git clone https://github.com/Dev-Annie/TravelProject.git
 
 This command will sometimes import seed data from the previous on startup.
 
-ADMIN USERNAME: user@email.com
-ADMIN PASSWORD: Password123!
+SAMPLE USERNAME: user@email.com
+SAMPLE PASSWORD: Code$123
 
 Or you could make your own, but it would be for a new tour guide user!
 
