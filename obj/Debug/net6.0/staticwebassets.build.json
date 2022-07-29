@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oQ8Y13zXaA114rH8Wd13KdJr+86xrJUclW1E1rghkng=",
+  "Hash": "U+NGvZgEFofn+XfVsmRTrSrbd9vZk8NElJMzhLjnTNM=",
   "Source": "TravelProject",
   "BasePath": "_content/TravelProject",
   "Mode": "Default",
@@ -1086,23 +1086,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\Athena\\Desktop\\New 727\\wwwroot\\css\\StyleSheet.css",
-      "SourceId": "TravelProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Athena\\Desktop\\New 727\\wwwroot\\",
-      "BasePath": "_content/TravelProject",
-      "RelativePath": "css/StyleSheet.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\Athena\\Desktop\\New 727\\wwwroot\\favicon.ico",

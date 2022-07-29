@@ -1,4 +1,7 @@
-html {
+btn btn-primary{
+    background-color:aqua !important;
+}
+/*html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
@@ -8,6 +11,7 @@ body {
 }
 container {
     max-width: 100% !important;
+    background-color: red;
 }
 
 btn-primary {
@@ -22,7 +26,6 @@ homepagebackground{
     background-color: red;
 }
 
-*{border:1px solid red;}
 
 @media (min-width: 768px) {
     html {
@@ -31,4 +34,4 @@ homepagebackground{
 }
 @media (min-width: 1200px) {
     
-    }
+    }*/
