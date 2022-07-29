@@ -56,7 +56,7 @@ Create, Read, Update, Delete method can be seen in Views folder
 1. Visualized data in a table format that shows activities on itinerary page (index)
 2. Used several LINQ query to retrieve information from the data structure (SQLite database) to update entries 
 3. Added rejex to input fields of Activity Name and Rental City
-4. Used several LINQ query to retrieve information from the data structure (SQLite database) to and sort Activities alphabetically
+4. Used several LINQ query to Sort Activities alphabetically
 
 
 
