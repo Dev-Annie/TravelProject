@@ -20,12 +20,35 @@ namespace TravelProject.Controllers
         }
 
         // GET: Rentals
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(string sortOrder)
         {
-              return _context.Rentals != null ? 
-                          View(await _context.Rentals.ToListAsync()) :
-                          Problem("Entity set 'Context.Rentals'  is null.");
+            ViewData["RentalNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "rentalname_desc" : "";
+
+
+
+
+            var rentals = from s in _context.Rentals
+                             select s;
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    rentals = rentals.OrderByDescending(s => s.Rentalname);
+                    break;
+
+
+                default:
+                    rentals = rentals.OrderBy(s => s.Rentalname);
+                    break;
+            }
+            return View(await rentals.AsNoTracking().ToListAsync());
         }
+        //public async Task<IActionResult> Index()
+        //{
+        //      return _context.Rentals != null ? 
+        //                  View(await _context.Rentals.ToListAsync()) :
+        //                  Problem("Entity set 'Context.Rentals'  is null.");
+        //}
 
         // GET: Rentals/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -22,7 +22,7 @@ homepagebackground{
     background-color: red;
 }
 
-*{border:1px solid green;}
+*{border:1px solid red;}
 
 @media (min-width: 768px) {
     html {

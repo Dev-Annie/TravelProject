@@ -23,14 +23,51 @@ namespace TravelProject.Controllers
         }
 
         // GET: Activities
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(string sortOrder)
         {
+            ViewData["TitleSortParm"] = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+           
+          
+            
 
+            var activities = from s in _context.Activities
+                           select s;
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    activities = activities.OrderByDescending(s => s.Title);
+                    break;
 
-            return _context.Activities != null ?
-                        View(await _context.Activities.ToListAsync()) :
-                        Problem("Entity set 'Context.Activities' is null.");
+               
+                default:
+                    activities = activities.OrderBy(s => s.Title);
+                    break;
+            }
+            return View(await activities.AsNoTracking().ToListAsync());
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //public async Task<IActionResult> Index()
+        //{
+
+
+        //    return _context.Activities != null ?
+        //                View(await _context.Activities.ToListAsync()) :
+        //                Problem("Entity set 'Context.Activities' is null.");
+        //}
 
         // GET: Activities/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -56,7 +93,7 @@ namespace TravelProject.Controllers
         {
             return View();
         }
-
+    
 
         // POST: Activities/Create
 
