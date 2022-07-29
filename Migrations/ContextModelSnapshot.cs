@@ -31,15 +31,35 @@ namespace TravelProject.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Type")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("IdActivity");
 
                     b.ToTable("Activities");
+                });
+
+            modelBuilder.Entity("TravelProject.Models.Parky", b =>
+                {
+                    b.Property<int>("IdParky")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("City")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Fee")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Parkname")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IdParky");
+
+                    b.ToTable("Parky_1");
                 });
 
             modelBuilder.Entity("TravelProject.Models.Rentals", b =>
@@ -49,17 +69,19 @@ namespace TravelProject.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal?>("Fee")
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal?>("Party")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Rentalname")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal?>("Party")
                         .HasColumnType("TEXT");
 
                     b.HasKey("IdRentals");

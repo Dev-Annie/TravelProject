@@ -17,7 +17,8 @@ namespace TravelProject.Models
 
 
         [Display(Name = "Enter Activity Name")]
-        [StringLength(30)]
+        [StringLength(50)]
+        [RegularExpression("^[a-zA-Z-@.]*$", ErrorMessage = "Please type letters only")]
         [Required(ErrorMessage = "{0} is required.")]
         public string? Title { get; set; }
 
@@ -29,7 +30,7 @@ namespace TravelProject.Models
 
         //public string? Description { get; set; }
 
-        [Display(Name = "Enter Activity Type")]
+        [Display(Name = "Type")]
         public Groups Type { get; set; }
         //public string Type { get; set; }
       

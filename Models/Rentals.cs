@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.RegularExpressions;
 
 namespace TravelProject.Models
 
@@ -33,10 +34,12 @@ namespace TravelProject.Models
         [Display(Name = "Enter Rental City")]
         [Required]
         [StringLength(30)]
+        [RegularExpression("^[a-zA-Z-@.]*$", ErrorMessage = "Please type letters only")]
         public string? City { get; set; }
 
         [Display(Name = "Fee")]
         [DataType(DataType.Currency)]
+
         public decimal? Fee { get; set; }
 
         //[Display(Name = "Select the Image")]

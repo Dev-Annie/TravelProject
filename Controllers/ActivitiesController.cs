@@ -51,15 +51,6 @@ namespace TravelProject.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
         //public async Task<IActionResult> Index()
         //{
 

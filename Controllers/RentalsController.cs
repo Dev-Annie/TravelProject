@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TravelProject.Data;
 using TravelProject.Models;
+using System.Text.RegularExpressions;
 
 namespace TravelProject.Controllers
 {

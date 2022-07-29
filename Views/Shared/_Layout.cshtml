@@ -23,9 +23,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                       
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Activities" asp-action="Index">Itinerary</a>
                         </li>
@@ -37,17 +35,7 @@
                         </li>
                           </ul>
                 </div>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
-                            style="background-color:white;color:black;border:none !important;outline:none !important">
-                        Activities
-                    </button>
-                    <div class="dropdown-menu">
-                        <ul>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Activities" asp-action="Index">List Activities</a>
-                        </li>
-                        </ul>
+                      
                     </div>
                 </div>
                     <partial name="_LoginPartial" />
@@ -65,6 +53,7 @@
         <div class="container">
             &copy; 2022 - Costa Rica Amigos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+        <div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
