@@ -1,4 +1,4 @@
-#COSTA RICA AMIGOS
+# COSTA RICA AMIGOS
 
 ![Costa Rica flag]( https://www.crwflags.com/fotw/images/c/cr.gif)
 
@@ -17,10 +17,10 @@ There is also the added bonus of adding rental properties to the site.  The foll
 -   [Prerequisites](#prerequisites)
 -   [Start Up](#start-up)
 -   [What does this CRUD app do?](#How-does-this-app-utilize-CRUD?) 
-    -   [Create Operations](#create-operations)
-    -   [Read Operations](#read-operations)
-    -   [Update Operations](#update-operations)
-    -   [Delete Operations](#delete-operations)
+    -   [Create Operations]
+    -   [Read Operations]
+    -   [Update Operations]
+    -   [Delete Operations]
 -   [Next Steps](#next-steps)
 
 </details>
@@ -32,32 +32,38 @@ Within this basic shopping cart management system there are two entities.   The 
 
 
 -    **Activities** are the events the customer would like to plan and have the following properties: 
-    -   Name, e.g. "Zip-lining"
-    -   Duration, e.g. "3 hour session"
-    -   Price, e.g. $50 USD
+      1. Name, e.g. "Zip-lining"
+      2. Duration, e.g. "3 hour session"
+      3. Price, e.g. $50 USD
 -    **Rental** is a location and has properties such as:  
-    -   Rental name, e.g. "Arena National Rental"
-    -   City, e.g. Jaco (in Costa Rica)
-    -   Nightly Fee, e.g. $40/day USD
-    -   An association to the activity in which the rental is located
+      1. Rental name, e.g. "Arena National Rental"
+      2. City, e.g. Jaco (in Costa Rica)
+      3. Nightly Fee, e.g. $40/day USD
+    -   An association to the activity in which the rental is located can be made
 
 # Architecture
 
 This application will be using .NET core, Entity Framework, C#, Sqlite 
 
--You must create at least one class, then create at least one object of that class and populate it with data. You must use or display the data in your application.
- Created class Activity with several objects with properties of name and price
- Created class Rentals with several objects with properties of city and fee
+-Created at least one class, then created at least one object of that class and populated it with data.
+ 1. There is class Activity with several objects with properties of name and price.
+ 2. There is class Rentals with several objects with properties of city and fee.
 
--Create and call at least 3 functions or methods, at least one of which must return a value that is used in your application.
-Create, Read, Update, Delete method can be seen in Views folder 
+-Created and called at least 3 functions or methods, at least one of which must return a value that is used in the application:
+1. Create
+2. Read
+3. Update
+4. Delete method
+-These can be seen in Views and controller folder.
 
 -Features List 
-1. Visualized data in a table format that shows activities on itinerary page (index)
-2. Used several LINQ query to retrieve information from the data structure (SQLite database) to update entries 
+1. Visualized data in a table format that shows activities on rental page (index)
+2. Used several LINQ queries to retrieve information from the data structure (SQLite database) to update entries 
 3. Added rejex to input fields of Activity Name and Rental City
-4. Used several LINQ query to Sort Activities alphabetically
-
+4. Used LINQ query to Sort Activities alphabetically
+5. Analyzed text and displayed information about it such as throwing error for incorrect user field input (i.e. inputting letters for price field)
+6. Read data from external file (sqlite database files)
+7. Created a list, populate it with several values (i.e. sports, culture), retrieve at least one value, and use it in the program (seen in drop-down menu for activity type)
 
 
 
@@ -73,7 +79,7 @@ Create, Read, Update, Delete method can be seen in Views folder
 
 # Start Up
 
-All services can be initialised by cloning the repository
+All services can be initialised by cloning the repository.  The homepage will default to
 https://localhost:7074/Home/
 
 ```console
